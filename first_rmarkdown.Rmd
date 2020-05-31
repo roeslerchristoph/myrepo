@@ -2,7 +2,9 @@
 title: "First_rmarkdown"
 author: "Christoph Roesler"
 date: "5/30/2020"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
