@@ -2,9 +2,7 @@
 #' title: "script to markdown"
 #' author: "Christoph Roesler"
 #' date: "5/31/2020"
-#'output: 
-#'  html_document: 
-#'    keep_md: yes
+#' output: github_document
 #' ---
 
 #+ r setup, include=FALSE
