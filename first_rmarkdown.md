@@ -7,33 +7,57 @@ output:
     keep_md: yes
 ---
 
-
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Test for new code
 
 
 ```r
-summary(cars)
+library(dplyr)
 ```
 
 ```
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
+## 
+## Attaching package: 'dplyr'
 ```
 
-## Including Plots
+```
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+```
 
-You can also embed plots, for example:
+```
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+```
 
-![](first_rmarkdown_files/figure-html/pressure-1.png)<!-- -->
+```r
+mtcars %>% 
+  filter(cyl >4)
+```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```
+##     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+## 1  21.0   6 160.0 110 3.90 2.620 16.46  0  1    4    4
+## 2  21.0   6 160.0 110 3.90 2.875 17.02  0  1    4    4
+## 3  21.4   6 258.0 110 3.08 3.215 19.44  1  0    3    1
+## 4  18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
+## 5  18.1   6 225.0 105 2.76 3.460 20.22  1  0    3    1
+## 6  14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
+## 7  19.2   6 167.6 123 3.92 3.440 18.30  1  0    4    4
+## 8  17.8   6 167.6 123 3.92 3.440 18.90  1  0    4    4
+## 9  16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
+## 10 17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
+## 11 15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
+## 12 10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
+## 13 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
+## 14 14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
+## 15 15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
+## 16 15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
+## 17 13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
+## 18 19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
+## 19 15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
+## 20 19.7   6 145.0 175 3.62 2.770 15.50  0  1    5    6
+## 21 15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8
+```
+
